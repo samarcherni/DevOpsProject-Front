@@ -21,10 +21,11 @@ pipeline {
                 }
             }
         }
-        stage('Maven Compile') {
+        stage('Node Compile') {
             steps {
                 script {
-                    sh "npm  install"
+                    sh "npm install --legacy-peer-deps
+"
                 }
             }
         }

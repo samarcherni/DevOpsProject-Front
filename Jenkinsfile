@@ -24,8 +24,7 @@ pipeline {
         stage('Node Compile') {
             steps {
                 script {
-                    sh "npm install --legacy-peer-deps
-"
+                    sh "npm install --legacy-peer-deps"
                 }
             }
         }

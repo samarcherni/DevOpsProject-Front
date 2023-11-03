@@ -17,14 +17,14 @@ pipeline {
         stage('Clean Install') {
             steps {
                 script {
-                    sh "rm -rf"
+                    sh "npm clean"
                 }
             }
         }
         stage('Node Compile') {
             steps {
                 script {
-                    sh "npm install --legacy-peer-deps"
+                    sh "npm run build"
                 }
             }
         }

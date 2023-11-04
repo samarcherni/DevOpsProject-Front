@@ -30,13 +30,13 @@ stages {
     
     stage('Docker build'){
      steps{
-      sh 'docker build -t samarcherni/frontend:1.2 .'
+      sh 'docker build -t samarcherni/frontend:1.3 .'
      }
     }
     stage('Docker push image'){
      steps{
       sh 'docker login -u samarcherni -p Handsoff2021'
-      sh 'docker push samarcherni/frontend:1.2'
+      sh 'docker push samarcherni/frontend:1.3'
      }
     }
 

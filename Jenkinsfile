@@ -2,6 +2,11 @@ pipeline {
   agent any
 
   stages {
+    stage('Hello ') {
+        steps {
+            echo 'hello'
+        }
+    }
     stage('Checkout GIT') {
       steps {
         git branch: 'GestionCategorieProduit',

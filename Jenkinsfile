@@ -1,5 +1,7 @@
+pipeline {
+  agent any
+  
 stages {
-    
     stage('Checkout GIT') {
       steps {
         git branch: 'GestionCategorieProduit',

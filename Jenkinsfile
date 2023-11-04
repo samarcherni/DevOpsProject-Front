@@ -108,7 +108,7 @@ pipeline {
                 }
             }
             steps {
-                sh 'docker push $DOCKERHUB_USERNAME/front --all-tags'
+                sh 'docker push $DOCKERHUB_USERNAME/frontend --all-tags'
             }
         }
         stage('Remove Containers') {

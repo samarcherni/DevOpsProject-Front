@@ -17,9 +17,10 @@ pipeline {
     }
     stage('compile'){
         steps{
-            sh 'npm start'
+            sh 'ng serve'
         }
     }
+    
     stage('Docker build'){
      steps{
       sh 'docker build -t samarcherni/front:1.0 .'

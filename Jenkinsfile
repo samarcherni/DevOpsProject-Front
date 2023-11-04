@@ -15,9 +15,14 @@ pipeline {
       }
      
     }
+    stage('install dependencies'){
+        steps{
+            sh 'npm install'
+        }
+    }
     stage('compile'){
         steps{
-            sh 'ng serve'
+            sh 'npm run build'
         }
     }
     

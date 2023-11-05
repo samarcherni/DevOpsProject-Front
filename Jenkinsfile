@@ -111,25 +111,5 @@ pipeline {
                 sh 'docker push $DOCKERHUB_USERNAME/front --all-tags'
             }
         }
-        stage('Remove Containers') {
-            when {
-                expression {
-                    (params.CHANGE_ID != null) && (targetBranch == 'GestionCategorieProduit')
-                }
-            }
-            steps {
-                sh '''
-                container_ids=$(docker ps -q --filter "publish=8089/tcp")
-                if [ -n "$container_ids" ]; then
-                    echo "Stopping and removing containers..."
-                    docker stop $container_ids
-                    docker rm $container_ids
-                else
-                    echo "No containers found using port 8089."
-                fi
-                '''
-            }
-        }
-
   }
 }

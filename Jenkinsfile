@@ -30,7 +30,7 @@ stages {
     
     stage('Docker build'){
      steps{
-      sh 'docker build -t samarcherni/bekindfront:angular .'
+      sh 'docker build -t samarcherni/devops_project:angular .'
      }
     }
     stage('Docker push image'){

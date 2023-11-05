@@ -30,13 +30,13 @@ stages {
     
     stage('Docker build'){
      steps{
-      sh 'docker build -t samarcherni/bekindfront:1.11 .'
+      sh 'docker build -t samarcherni/bekindfront:angular .'
      }
     }
     stage('Docker push image'){
      steps{
       sh 'docker login -u samarcherni -p Handsoff2021'
-      sh 'docker push samarcherni/bekindfront:1.11'
+      sh 'docker push samarcherni/bekindfront:angular'
      }
     }
     stage('hello'){

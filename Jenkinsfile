@@ -39,6 +39,11 @@ stages {
       sh 'docker push samarcherni/frontend:1.4'
      }
     }
+    stage('hello'){
+        steps{
+            echo 'hello'
+        }
+    }
 
   }
 }

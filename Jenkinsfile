@@ -36,14 +36,10 @@ stages {
     stage('Docker push image'){
      steps{
       sh 'docker login -u samarcherni -p Handsoff2021'
-      sh 'docker push samarcherni/bekindfront:angular'
+      sh 'docker push samarcherni/devops_project:angular'
      }
     }
-    stage('hello'){
-        steps{
-            echo 'hello'
-        }
-    }
+  
 
   }
 }

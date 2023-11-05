@@ -41,3 +41,5 @@ services:
       - spring-boot-app
     networks:
       - my-network
+networks:
+  my-network:

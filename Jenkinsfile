@@ -39,12 +39,5 @@ stages {
       sh 'docker push samarcherni/devops_project:angular'
      }
     }
-  stage('Docker compose'){
-     steps{
-      sh 'docker-compose up'
-     }
-    }
-  
-
   }
 }

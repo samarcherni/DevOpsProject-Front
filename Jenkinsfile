@@ -30,13 +30,13 @@ stages {
     
     stage('Docker build'){
      steps{
-      sh 'docker build -t samarcherni/devops_project:angular .'
+      sh 'docker build -t samarcherni/angularops:v2 .'
      }
     }
     stage('Docker push image'){
      steps{
       sh 'docker login -u samarcherni -p Handsoff2021'
-      sh 'docker push samarcherni/devops_project:angular'
+      sh 'docker push samarcherni/angularops:v2'
      }
     }
   }

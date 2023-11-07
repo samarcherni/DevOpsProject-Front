@@ -10,5 +10,5 @@ RUN npm run build --prod
 FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=builder /app/dist/crudtuto-Front /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 8085
 CMD ["nginx", "-g", "daemon off;"]
